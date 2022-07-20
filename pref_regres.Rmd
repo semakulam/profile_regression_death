@@ -41,8 +41,97 @@ names(deaths2)[10]<- "Vaccination status"
 death3<-dplyr::left_join(deaths,deaths2,by="Names", )
 
 ```
+```{r}
+
+death3<-deaths[1,]
+```
+
+```{r}
+deaths3<-deaths[1:876,]
+
+```
+```{r}
+deaths3$Names<-deaths2$Names
+deaths3$Age<-deaths2$Age
+deaths3$Gender<-deaths2$Gender
+deaths3$Comorbidity<-deaths2$Comorbidity
+deaths3$District<-deaths2$District
+deaths3$`Vaccination status`<- deaths2$`Vaccination status`
+```
+```{r}
+library("dplyr")
+library("tidyr")
+```
 
 
+
+```{r}
+deaths3$outcome <- 0
+deaths$outcome <- 1
+
+```
+```{r}
+data_d <-rbind(deaths,deaths3)
+
+```  
+  
+
+```{r}
+# Female= 0,Male=1
+data_d$Gender[data_d$Gender=="F"] <- "0"
+data_d$Gender[data_d$Gender=="Female"] <- "0"
+data_d$Gender[data_d$Gender=="M"] <- "1"
+data_d$Gender[data_d$Gender=="Male"] <- "1"
+
+```
+```{r}
+data_d$agecat = data_d$Age 
+data_d$agecat[data_d$Age < 20] <- "0"
+data_d$agecat[data_d$Age >= 20 & data_d$Age < 30] <- "1"
+data_d$agecat[data_d$Age >= 30 & data_d$Age < 40] <- "2"
+data_d$agecat[data_d$Age >= 40 & data_d$Age < 50] <- "3"
+data_d$agecat[data_d$Age >= 50 & data_d$Age < 60] <- "4"
+data_d$agecat[data_d$Age >= 60 & data_d$Age < 70] <- "5"
+data_d$agecat[data_d$Age >= 70 & data_d$Age < 80] <- "6"
+data_d$agecat[data_d$Age >= 80] <- "7"
+```
+```{r}
+data_d$`Dose Number`[data_d$`Dose Number`=="1 Dose"] <- "1"
+data_d$`Dose Number`[data_d$`Dose Number`=="Dose 1"] <- "1"
+data_d$`Dose Number`[data_d$`Dose Number`=="Dose 1&2"] <- "2"
+data_d$`Dose Number`[data_d$`Dose Number`=="Dose 1,2&Booster"] <- "3"
+data_d$`Dose Number`[data_d$`Dose Number`=="N/A"] <- "0"
+
+```
+```{r}
+data_d$treat <- data_d$`Treatment protocol`
+
+data_d$treat[data_d$`Treatment protocol`=="treated with usual protocol"] <- "1"
+data_d$treat[data_d$`Treatment protocol`=="treated with usual protocol."] <- "1"
+data_d$treat[data_d$`Treatment protocol`=="treated with usual protocol. Condition did not improve"] <- "1"
+data_d$treat[data_d$`Treatment protocol`=="treated with usual protoco"] <- "1"
+
+data_d$treat[data_d$`Treatment protocol`=="treated with antibiotics, favipiravir and oxygen therapy"] <- "2"
+data_d$treat[data_d$`Treatment protocol`=="Antibiotics and oxygen"] <- "3"
+data_d$treat[data_d$`Treatment protocol`=="Antibiotics, favipiravir and oxygen therapy"] <- "2"
+data_d$treat[data_d$`Treatment protocol`=="treated with oxygen therapy and antibiotics"] <- "2"
+data_d$treat[data_d$`Treatment protocol`=="cocktail therapy, and oxygen therapy, later intubated"] <- "4"
+data_d$treat[data_d$`Treatment protocol`=="treated with oxygen, Favipiravir, Ivermectin"] <- "5"
+
+data_d$treat[data_d$`Treatment protocol`=="favirpiravir and oxygen therapy and later intubated"] <- "5"
+data_d$treat[data_d$`Treatment protocol`=="favipiravir, antibiotics, insulin therapy and oxygen therapy, later intubated "] <- "5"
+data_d$treat[data_d$`Treatment protocol`=="favipiravir and oxygen therapy, later intubated"] <- "5"
+data_d$treat[data_d$`Treatment protocol`=="favipiravir and oxygen therapy later intubated"] <- "5"
+data_d$treat[data_d$`Treatment protocol`=="nebulisation, antibiotics and oxygen"] <- "5"
+
+data_d$treat[data_d$`Treatment protocol`=="treated with antibiotics and oxygen therapy"] <- "0"
+
+data_d$treat[data_d$`Treatment protocol`=="oxygen therapy"] <- "0"
+
+data_d$treat[data_d$`Treatment protocol`=="monoclonal antibodies, antibiotics, Favipiravir, and oxygentherapy"] <- "6"
+data_d$treat[data_d$`Treatment protocol`=="monoclonal antibodies, antibiotics, and oxygen"] <- "6"
+
+```
 ## Introduction
 
 
