@@ -12,8 +12,37 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r deaths, include=TRUE}
 
 deaths<-readxl::read_excel("Covid_Deaths.xlsx")
-head(deaths)
 ```
+```{r deaths1, include=TRUE}
+deaths1<-readxl::read_excel("Vanessa data set.xlsx")
+```
+```{r Positive_tests, include=TRUE}
+Positive_tests <- readr::read_csv("Positive tests.csv")
+```
+
+````{r deaths1}
+table(deaths1$Outcome)
+
+```
+
+```{r deaths2}
+deaths2 <- dplyr::filter(deaths1,Outcome== "Discharged")
+names(deaths2)[2]<- "Names"
+```
+```{r}
+names(deaths2)[2]<- "Names"
+names(deaths2)[3]<- "Age"
+names(deaths2)[4]<- "Gender" 
+names(deaths2)[7]<- "District" 
+names(deaths2)[8]<- "Comorbidity"
+names(deaths2)[10]<- "Vaccination status"
+```
+```{r}
+death3<-dplyr::left_join(deaths,deaths2,by="Names", )
+
+```
+
+
 ## Introduction
 
 
