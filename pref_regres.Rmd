@@ -131,6 +131,175 @@ data_d$treat[data_d$`Treatment protocol`=="oxygen therapy"] <- "0"
 data_d$treat[data_d$`Treatment protocol`=="monoclonal antibodies, antibiotics, Favipiravir, and oxygentherapy"] <- "6"
 data_d$treat[data_d$`Treatment protocol`=="monoclonal antibodies, antibiotics, and oxygen"] <- "6"
 
+data_d$treat[data_d$`Treatment protocol`=="favipiravir and oxygen therapy"] <- "2"
+data_d$treat[data_d$`Treatment protocol`=="favipiravir and mechanical ventilation"] <- "5"
+data_d$treat[data_d$`Treatment protocol`=="favipiravir and oxygen therapy including intubation"] <- "5"
+data_d$treat[data_d$`Treatment protocol`=="hemodialysis"] <- "7"
+data_d$treat[data_d$`Treatment protocol`=="oxygen, antibiotics, favipiravir"] <- "2"
+data_d$treat[data_d$`Treatment protocol`=="favipiravir, transfusions and oxygen therapy"] <- "2"
+data_d$treat[data_d$`Treatment protocol`=="nebulization and antibiotics"] <- "2"
+
+data_d$treat[data_d$`Treatment protocol`=="oxygen, IV fluids and antibiotics"] <- "1"
+data_d$treat[data_d$`Treatment protocol`=="favipiravir, antibiotics, insulin therapy and oxygen therapy, later intubated"] <- "5"
+
+data_d$treat[data_d$`Treatment protocol`=="cocktail therapy, anti HTN drugs, insulin and oxygen therapy, her condition"] <- "4"
+data_d$treat[data_d$`Treatment protocol`=="No information"] <- NA
+data_d$treat[data_d$`Treatment protocol`=="bedridden for two years and was placed under palliative care"] <- "0"
+data_d$treat[data_d$`Treatment protocol`=="treated for his existing conditions and with oxygen therapy"] <- "1"
+data_d$treat[data_d$`Treatment protocol`=="treated with antibiotics, favipiravir and oxygen therapy, later intubated"] <- "5"
+
+data_d$treat[data_d$`Treatment protocol`=="treated with antibiotics, oxygen therapy and covid-19 cocktail therapy"] <- "4"
+data_d$treat[data_d$`Treatment protocol`=="He was stable and placed in homebased care"] <- "-1"
+
+
+data_d$treat[data_d$`Treatment protocol`=="placed in homebased care. She developed severed respiratory distress while at home"] <- "-1"
+
+
+data_d$treat[data_d$`Treatment protocol`=="child were discharged on 25.06 to continue treatment in HBC"] <- "-1"
+
+data_d$treat[data_d$`Treatment protocol`=="followed at CHUK for lower urinary tract symptoms, prostatectomy for benign prostatic hyperplasia"] <- "7"
+
+data_d$treat[data_d$`Treatment protocol`=="admitted at CHUK for follow up of suspected multiple myeloma or spinal metastasis"] <- "7"
+
+data_d$treat[data_d$`Treatment protocol`=="His symptoms had begun 2 days prior, with dry cough and asthenia"] <- "1"
+data_d$treat[data_d$`Treatment protocol`=="he was operated on 26/06. His condition was complicated by covid status, and he remained on mechanical ventilation until he passed away"] <- "5"
+
+data_d$treat[data_d$`Treatment protocol`=="prepared for transfer to King Faisal Hospital but unfortunately died on the way"] <- "8"
+
+
+data_d$treat[data_d$`Treatment protocol`=="She was hypoxic on arrival and prepared for transfer"] <- "8"
+
+data_d$treat[data_d$`Treatment protocol`=="he was prepared for transfer to Kaduha DH but died before transfer"] <- "8"
+
+data_d$treat[data_d$`Treatment protocol`=="treated with blood transfusion, resuscitation but passed away"] <- "6"
+
+data_d$treat[data_d$`Treatment protocol`== "He was sent home to be placed in homebased care as he was stable"] <- "-1"
+
+data_d$treat[data_d$`Treatment protocol`== "She was placed in homebased care as she was stable"] <- "-1"
+
+
+data_d$treat[data_d$`Treatment protocol`== "hypoxic on arrival and treated with antibiotics, favipiravir and oxygen therapy"] <- "2"
+
+data_d$treat[data_d$`Treatment protocol`== "treated but her condition deteriorated, and she passed away"] <- "1"
+
+
+
+data_d$treat[data_d$`Treatment protocol`== "He was stable and admitted in HBC. He developed and mild fever and cold, but his condition deteriorated"] <- "-1"
+
+data_d$treat[data_d$`Treatment protocol`== "She was place in homebased care as she was stable"] <- "-1"
+
+
+
+data_d$treat[data_d$`Treatment protocol`== "He alerted a CHW and reported weakness and a severe cough. He was prepared for evacuation to Remera Rukoma hospital but passed away"] <- "-1"
+
+
+
+data_d$treat[data_d$`Treatment protocol`== "Her family reported that she had been having mild symptoms for a week, until 9th when she developed shortness of breath. She had a sudden cardiac arrest while at home, a post-mortem test at Rubengera HC (Karongi) confirmed covid positive status"] <- "-1"
+
+data_d$treat[data_d$`Treatment protocol`== "antibiotics"] <- "1"
+
+data_d$treat[data_d$`Treatment protocol`== "burn as well as oxygen therapy"] <- "1"
+
+data_d$treat[data_d$`Treatment protocol`== "Home bases care"] <- "-1"
+
+data_d$treat[data_d$`Treatment protocol`== "Tested positive at Kabuga HC (Kamonyi) on 09/08"] <- "1"
+data_d$treat[data_d$`Treatment protocol`== "His condition suddenly deteriorated on 17/08 and he passed away at home"] <- "-1"
+data_d$treat[data_d$`Treatment protocol`== "placed in home-based care"] <- "-1"
+data_d$treat[data_d$`Treatment protocol`== "from home treated with usual protocol"] <- "1"
+
+data_d$treat[data_d$`Treatment protocol`== "He had difficulty breathing, CPR was unsuccessful. Tested positive post-mortem"] <- "1"
+data_d$treat[data_d$`Treatment protocol`== "patient died at home and during the assessment  , he was  tested postmortem"] <- "-1"
+
+data_d$treat[data_d$`Treatment protocol`== "Her family reported that she had been having mild symptoms for a week, until 9th when she developed shortness of breath. She had a sudden cardiac arrest while at home, a post-mortem test at Rubengera HC (Karongi) confirmed covid positive status"] <- "-1"
+
+data_d$treat[data_d$`Treatment protocol`== "favirpiravir and oxygen therapy"] <- "2"
+data_d$treat[data_d$`Treatment protocol`== "hemodialysis, favipiravir and oxygen therapy"] <- "8"
+
+data_d$treat[data_d$`Treatment protocol`=="oxygen therapy and antibiotics"] <- "1"
+
+data_d$treat[data_d$`Treatment protocol`=="oxygentherapy, antibiotics and favipiravir"] <- "2"
+
+data_d$treat[data_d$`Treatment protocol`=="Treated with oxygen therapy, favipiravir and antibiotics"] <- "2"
+
+data_d$treat[data_d$`Treatment protocol`=="Treated with favipiravir, antibiotics and oxygen therapy"] <- "2"
+
+data_d$treat[data_d$`Treatment protocol`=="treated with antibiotics, favirapiravir and oxygen therapy"] <- "2"
+
+data_d$treat[data_d$`Treatment protocol`== "treated with antibiotics, and oxygen therapy"] <- "2"
+
+data_d$treat[data_d$`Treatment protocol`== "treated with antibiotics, insulin and oxygenotherapy"] <- "2"
+
+data_d$treat[data_d$`Treatment protocol`== "treated with antibiotics, insulin and oxygenotherapy"] <- "2"
+
+
+data_d$treat[data_d$`Treatment protocol`== "He passed away while in the community on 10/08"] <- "-1"
+data_d$treat[data_d$`Treatment protocol`== "Tested positive at Karangara HC (Kamonyi) on 06/08"] <- "-1"
+data_d$treat[data_d$`Treatment protocol`== "homebased care"] <- "-1"
+data_d$treat[data_d$`Treatment protocol`== "Arrived dead at kanyinya"] <- "-1"
+data_d$treat[data_d$`Treatment protocol`== "favirpiravir and oxygen therapy"] <- "2"
+data_d$treat[data_d$`Treatment protocol`== "favirpiravir and oxygen therapy"] <- "2"
+data_d$treat[data_d$`Treatment protocol`== "hemodialysis, favipiravir and oxygen therapy"] <- "8"
+
+data_d$treat[data_d$`Treatment protocol`== "oxygen therapy and antibiotics"] <- "1"
+data_d$treat[data_d$`Treatment protocol`== "oxygen therapy and antibiotics"] <- "1"
+
+
+data_d$treat[data_d$`Treatment protocol`== "favirpiravir"] <- "2"
+
+
+data_d$treat[data_d$`Treatment protocol`== "oxygentherapy, antibiotics and favipiravir"] <- "2"
+data_d$treat[data_d$`Treatment protocol`== "Treated with oxygen therapy, favipiravir and antibiotics"] <- "2"
+data_d$treat[data_d$`Treatment protocol`== "Treated with oxygen therapy, favipiravir and antibiotics"] <- "2"
+
+
+
+data_d$treat[data_d$`Treatment protocol`== "Treated with favipiravir, antibiotics and oxygen therapy"] <- "2"
+
+
+data_d$treat[data_d$`Treatment protocol`== "treated with antibiotics, favirapiravir and oxygen therapy"] <- "2"
+data_d$treat[data_d$`Treatment protocol`== "treated with antibiotics, and oxygen therapy"] <- "2"
+data_d$treat[data_d$`Treatment protocol`== "treated with antibiotics, insulin therapy and oxygen therapy"] <- "2"
+
+data_d$treat[data_d$`Treatment protocol`== "treated with antibiotics, insulin and oxygenotherapy"] <- "1"
+
+
+data_d$treat[data_d$`Treatment protocol`== "treated with antibiotics, insulin and oxygenotherapy"] <- "1"
+
+
+
+data_d$treat[data_d$`Treatment protocol`== "He passed away while in the community on 10/08"] <- "-1"
+
+
+
+data_d$treat[data_d$`Treatment protocol`== "Tested positive at Karangara HC (Kamonyi) on 06/08"] <- "-1"
+
+
+
+data_d$treat[data_d$`Treatment protocol`== "homebased care"] <- "-1"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 ## Introduction
 
