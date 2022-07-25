@@ -276,33 +276,507 @@ data_d$treat[data_d$`Treatment protocol`== "Tested positive at Karangara HC (Kam
 
 
 data_d$treat[data_d$`Treatment protocol`== "homebased care"] <- "-1"
+```
 
 
+```{r}
 
+#vaccine
+data_d$vacc<-data_d$`Vaccination status`
+data_d$vacc[data_d$`Vaccination status`== "No"]<- "0"
+data_d$vacc[data_d$`Vaccination status`== "Not vaccinated"]<- "0"
+data_d$vacc[data_d$`Vaccination status`== "Unknown"]<- "0"
+data_d$vacc[data_d$`Vaccination status`== "Vaccinated"]<- "1"
+data_d$vacc[data_d$`Vaccination status`== "Yes"]<- "1"
 
+```
 
+```{r}
 
+#type of vaccine
 
+data_d$type_vacc<-data_d$`Vaccine taken`
+data_d$type_vacc[data_d$`Vaccine taken`=="1AstraZeneca & 2 Moderna"]<-"1"
+data_d$type_vacc[data_d$`Vaccine taken`=="2AstraZeneca & Moderna"]<-"1"
+data_d$type_vacc[data_d$`Vaccine taken`=="AstraZeneca & Moderna"]<-"1"
+data_d$type_vacc[data_d$`Vaccine taken`=="2Pfizer & Moderna"]<-"2"
+data_d$type_vacc[data_d$`Vaccine taken`=="Pfizer & Moderna"]<-"2"
+data_d$type_vacc[data_d$`Vaccine taken`=="AstraZeneca, Pfizer & Moderna"]<-"3"
+data_d$type_vacc[data_d$`Vaccine taken`=="Moderna"]<-"4"
+data_d$type_vacc[data_d$`Vaccine taken`=="AstraZeneca"]<-"5"
+data_d$type_vacc[data_d$`Vaccine taken`=="Pfizer"]<-"6"
+data_d$type_vacc[data_d$`Vaccine taken`=="Johnson & Johnson"]<-"7"
+data_d$type_vacc[data_d$`Vaccine taken`=="Sputnik"]<-"8"
+data_d$type_vacc[data_d$`Vaccine taken`=="Sputnik V"]<-"8"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+data_d$type_vacc[data_d$`Vaccine taken`=="Sinopharm"]<-"9"
+data_d$type_vacc[data_d$`Vaccine taken`=="Not documented"]<-"9"
+data_d$type_vacc[data_d$`Vaccine taken`=="Unknown"]<-"10"
+data_d$type_vacc[data_d$`Vaccine taken`=="AstraZeneca & Pfizer"]<-"11"
+data_d$type_vacc[data_d$`Vaccine taken`=="N/A"]<-NA
 
 
 
 ```
-## Introduction
 
+
+```{r}
+# Commodities
+data_d$comorb<-data_d$Comorbidity
+data_d$comorb[data_d$Comorbidity=="No"| data_d$Comorbidity=="no known comorbidities"|data_d$Comorbidity=="no known cormobidity"| data_d$Comorbidity=="None"]<-"0"
+data_d$comorb[data_d$Comorbidity=="no known comorbidity"]<-"0"
+data_d$comorb[data_d$Comorbidity=="no known Cormobidities"]<-"0"
+
+data_d$comorb[data_d$Comorbidity=="with no known comorbidities"]<-"0"
+data_d$comorb[data_d$Comorbidity=="Hypertension"]<-"1"
+data_d$comorb[data_d$Comorbidity=="Pregnant"]<-"2"
+pregnancy on 28 weeks and delivered by C-section
+pregnant
+data_d$comorb[data_d$Comorbidity=="Asthma"]<-"3"
+data_d$comorb[data_d$Comorbidity=="HIV"]<-"4"
+HIV, Acute Kidney Injury, and severe sepsis 
+HIV, Hepatitis B
+Hiv,Pulmonary TB,Hepatitis B
+hemiplegia
+hemiplegia and Diabetes 
+hepatic cirrhosis
+hepatitis b
+hepatitis b and c
+hepatitis C
+hepatitis C
+
+data_d$comorb[data_d$Comorbidity=="Diabete"]<-"5"
+
+Diabetes
+Diabetes 
+Diabetes mellitus
+diabetic ketoacidosis
+history of diabetes
+
+data_d$comorb[data_d$Comorbidity=="Admitted with COVID19 on end stage HIV after lost followup from HIV care"]<-"6"
+
+data_d$comorb[data_d$Comorbidity=="hypertension and diabetes"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and renal failure"]<-"7"
+data_d$comorb[data_d$Comorbidity=="diabetes and hypertension"]<-"7"
+data_d$comorb[data_d$Comorbidity=="diabetes and acute kidney injury"]<-"7"
+data_d$comorb[data_d$Comorbidity=="chronic kidney disease and hepatitis C"]<-"7"
+data_d$comorb[data_d$Comorbidity=="diabetes and hepatitis c"]<-"7"
+data_d$comorb[data_d$Comorbidity=="spinal cord compression and sepsis"]<-"7"
+data_d$comorb[data_d$Comorbidity=="sepsis and osteoarthritis"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and asthma"]<-"7"
+data_d$comorb[data_d$Comorbidity=="liver cancer and deep vein thrombosis"]<-"7"
+data_d$comorb[data_d$Comorbidity=="pregnant and with a history of asthma"]<-"7"
+data_d$comorb[data_d$Comorbidity=="diabetes and hypothyroidism"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and cardiomyopathy"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and cardiomyopathy"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and malnutrition"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and malnutrition"]<-"7"
+
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease and chronic kidney disease"]<-"7"
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease and tuberculosis"]<-"7"
+data_d$comorb[data_d$Comorbidity=="prostate cancer and hypertension"]<-"7"
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease and subsequent tuberculosis"]<-"7"
+data_d$comorb[data_d$Comorbidity=="diabetes and meningitis"]<-"7"
+data_d$comorb[data_d$Comorbidity=="heart disease and diabetes"]<-"7"
+data_d$comorb[data_d$Comorbidity=="diabetes and hypertension leading to stroke"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and hepatitis c"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and diabetes as well as right limb amputation"]<-"7"
+data_d$comorb[data_d$Comorbidity=="obesity and preeclampsia"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and hepatitis C"]<-"7"
+data_d$comorb[data_d$Comorbidity=="2nd degree burns and respiratory distress"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension and left hemiplegia"]<-"7"
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease and pulmonary tuberculosis"]<-"7"
+data_d$comorb[data_d$Comorbidity=="gangrenous foot and heart failure"]<-"7"
+data_d$comorb[data_d$Comorbidity=="chronic kidney injury and transplant rejection"]<-"7"
+data_d$comorb[data_d$Comorbidity=="chronic kidney injury and transplant rejection"]<-"7"
+data_d$comorb[data_d$Comorbidity=="gastric outlet obstruction and acute kidney injury"]<-"7"
+data_d$comorb[data_d$Comorbidity=="hypertension asthma and cardiomyopathy"]<-"7"
+
+#More than 2 cormobidities
+
+data_d$comorb[data_d$Comorbidity=="stroke, diabetes, and hypertension"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease, cirrhosis, lymphoma, and meningitis"]<-"8"
+data_d$comorb[data_d$Comorbidity=="stroke (3 times), hypertension and acute renal failure"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes, hypertension, and heart disease"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes, hypertension, and heart disease"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="chronic kidney disease, hypertension, and diabetes"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="diabetes, hypertension, and kidney disease"]<-"8"
+data_d$comorb[data_d$Comorbidity=="enlarged spleen, and liver failure caused by malaria"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension, diabetes, and chronic immunocompromising disease"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension, diabetes, chronic kidney disease, third degree heart block with pacemaker"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes, hypertension, hepatitis c, cirrhosis and hepatic encelopathy"]<-"8"
+data_d$comorb[data_d$Comorbidity=="advanced esophageal carcinoma, chronic kidney disease, diabetes, and hypertension"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension, liver cirrhosis and encephalopathy, stroke"]<-"8"
+data_d$comorb[data_d$Comorbidity=="pulmonary embolism with right heart dilation and atrial fibrillation"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes, hypertension, and chronic kidney disease"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hepatitis, chronic kidney disease, hypertension, and diabetes"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="chronic kidney disease, chronic immunocompromising disease, hypertension, and congestive heart failure"]<-"8"
+
+
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease, hypertension, and diabetes"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes, hypertension, renal failure, lower limb gangrene and malnutrition"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease, tuberculosis and cryptococcal meningitis"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes, hypertension, chronic gastritis"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="diabetes, hypertension, and stroke"]<-"8"
+data_d$comorb[data_d$Comorbidity=="history of cute kidney injury, chronic kidney disease and diabetes"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes, hypertension, and chronic kidney disease"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="cardiomyopathy, acute kidney injury and pre-eclampsia"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension chronic kidney disease and hypertension cardiomyopathy"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="Diabetes, hypertension, and obesity"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="Acute Cerebelitis ,Mild global cortical atrophy and lacunar infarct as confirmed by  head CT"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="acute kidney and liver injury chronic Anemia"]<-"8"
+ 
+ data_d$comorb[data_d$Comorbidity=="acute kidney injury and acute lung injury"]<-"8"
+
+ data_d$comorb[data_d$Comorbidity=="Acute Kidney Injury and Liver Injury"]<-"8"
+
+ data_d$comorb[data_d$Comorbidity=="acute liver and kidney injury paralysis"]<-"8"
+ data_d$comorb[data_d$Comorbidity=="Hepatitis B&C,chronic liver disease and malnutrition"]<-"8"
+ data_d$comorb[data_d$Comorbidity=="diabetes type1 ,hypertension,chronic kidney disease"]<-"8"
+
+ data_d$comorb[data_d$Comorbidity=="Asthma and Heart failure"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="asthma and hepatitis c"]<-"8"
+data_d$comorb[data_d$Comorbidity=="asthma and hypertension"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Alzheimer and senile dementia"]<-"8"
+data_d$comorb[data_d$Comorbidity=="amenorrhea, 3 previous uterine scars"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease and anemia"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease and cardiomyopathy"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease and epilepsy"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease and hepatitis c"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic immunocompromising disease and hypertension"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic kidney disease and Benign prostate hyperplasia"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic kidney disease and hypertension"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic obstructive pulmonary disease and renovascular disease"]<-"8"
+data_d$comorb[data_d$Comorbidity=="chronic obstructive pulmonary disease and renovascular disease"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="Diabetes and Acute Kidney Injury"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Diabetes and Acute Kidney Injury"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes and Acute kidney injury"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes and cardiomyopathy"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes and cerebral malaria"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes and chronic immunocompromising disease,"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Diabetes and Chronic Kidney Disease"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Diabetes and Hypertension"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes and obesity (BMI over 40)"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes and obesity,"]<-"8"
+data_d$comorb[data_d$Comorbidity=="diabetes hypertension and acute kidney injury"]<-"8"
+data_d$comorb[data_d$Comorbidity=="down syndrome and congestive heart failure"]<-"8"
+data_d$comorb[data_d$Comorbidity=="down syndrome and heart failure"]<-"8"
+data_d$comorb[data_d$Comorbidity=="heart failure and hypertension"]<-"8"
+data_d$comorb[data_d$Comorbidity=="heart failure and kidney injury"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Heart failure on pericarditis"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hepatitis C and  Hepatitis B"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Hepatitis C and  Liver cirrhosis"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Hepatitis C and chronic liver disease"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Hepatitis C and Cirrhosis"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hepatitis c and hepatocarcinoma"]<-"8"
+data_d$comorb[data_d$Comorbidity=="history of Asthma and mental disorder"]<-"8"
+data_d$comorb[data_d$Comorbidity=="history of HBV and heapatic Encephalopathy"]<-"8"
+data_d$comorb[data_d$Comorbidity=="history of HIV ,and Chronic kidney disease"]<-"8"
+data_d$comorb[data_d$Comorbidity=="history of HIV, asthma and Obesity"]<-"8"
+data_d$comorb[data_d$Comorbidity=="history of Hypertension and ischemic stroke"]<-"8"
+data_d$comorb[data_d$Comorbidity=="history of Hypothyroidism and Hypertension"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="history of Kidney failure and diabetes"]<-"8"
+data_d$comorb[data_d$Comorbidity=="HIV  and Tuberculosis with poor drug adherence"]<-"8"
+data_d$comorb[data_d$Comorbidity=="HIV ,severe malnutrition,and tuberculosis"]<-"8"
+data_d$comorb[data_d$Comorbidity=="HIV and hypertension"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="HIV and suspicion of lymphoma"]<-"8"
+data_d$comorb[data_d$Comorbidity=="HIV and tuberculosis"]<-"8"
+data_d$comorb[data_d$Comorbidity=="HIV and TB"]<-"8"
+data_d$comorb[data_d$Comorbidity=="history of being newly diagnosed with HIV"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Hypertension and  HIV"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Hypertension and Anemia"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and chronic gastritis"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and chronic kidney disease"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and Diabetes"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Hypertension and Diabetes"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Hypertension and Diabetes mellitus"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and end stage congestive heart failure"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and femur fracture"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and gastritis"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and gout"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and heart block"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and hemiplegia"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and hemiplegia post stroke"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Hypertension and Hepatitis C"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and myocardial infarction"]<-"8"
+data_d$comorb[data_d$Comorbidity=="hypertension and stroke"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Hypertension and Stroke with left hemiplegia"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="Hypertension and Stroke with left hemiplegia"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="hypertension, chronic kidney disease and diabetes"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="immunocompromising disease and malnutrition 
+"]<-"8"
+data_d$comorb[data_d$Comorbidity=="Ischemic stroke, Chronic Kidney Disease
+"]<-"8"
+
+data_d$comorb[data_d$Comorbidity=="hypertension, diabetes, and schizophrenia
+"]<-"8"
+
+
+ 
+
+
+
+
+
+ 
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+hypertension, "hypertension"
+
+intestinal obstruction and 26-week pregnancy
+ischemic stroke, hepatitis c
+
+hypertension, diabetes, end stage renal disease 
+hypertension,history of stroke and unhealed fractures.
+Hypertension ,chronic kidney  disease , Hepatitis C and chronic liver disease
+Hypertension ,diabetes,Asthma and hepatitis c
+Hypertension , Diabetes mellitus , tuberculosis  (treated) and prostatic adenoma, 
+chronic immunocompromising disease, syphilis, splenomegaly stage II with anemia 
+chronic obstructive pulmonary disease, cirrhosis, and chronic kidney disease 
+asthma, silicosis, and tuberculosis,
+down syndrome, cardiomyopathy and thrombocytopenia
+espiratory distress, and decreased level of consciousness. 
+gastrointestinal bleeding, anemia, vascular dementia 
+history of Asthma , Chronic kidney disease and hemiparesis
+history of chronic kidney disease, hypertension, hepatorenal syndrome, Anemia, and congestive heart failure
+history of Blunt chest trauma with hemothorax, stroke and congestive heart failure, 
+history of Diabetes mellitus, Hypertension and chronic obstructive pulmonary disease
+history of Hypertension , diabetes Mellitus and  asthma, 
+history of diabetes and Hypertension 
+history of Diabetes and Mental disorder
+hypertension Chronic Kidney disease and venous insufficiency 
+hypertension hepatitis C and cirrhosis 
+hypertension and tension pneumothora
+renovascular disease, systolic anterior motion, and anemia
+splenectomy, diabetes, and hypertension
+pneumonia and chronic renal failure
+obstructive sleep apnea hypertrophic tonsils and adenoids 
+hypertension , Diabetes mellitus, 
+hypertension, diabetes
+
+
+##one comorbidity
+gastric tumor
+Gastritis
+gout and hypertension
+heart conditions
+heart failure 
+heart failure.
+asthma.
+Benign prostate hyperplasia
+Benign prostatic hyperplasia
+bile duct cancer
+born preterm triplet at 34 weeks
+brain meningioma
+brain tumor
+cardiomyopathy with ischemic stroke
+cerebral malaria
+chronic anemia
+chronic anemia, 
+chronic aphasia and falsy palsy
+chronic gastritis
+chronic gastritis 
+chronic immunocompromising disease
+chronic immuno-compromising disease
+chronic immunocompromising disease 
+chronic immunocompromising disease, 
+chronic intestinal obstruction
+chronic kidney disease
+chronic kidney injury
+chronic malnutrition
+chronic pulmonary disease 
+chronic rheumatic arthritis 
+colon cancer
+complications post c-section 
+congenital heart disease
+day 6 post c-section
+dementia
+
+diabetes,
+diabetic
+diffuse large B-cell lymphoma, 
+dilated cardiomyopathy
+dilated cardiomyopathy 
+anemia
+ascites secondary to hepatitis B 
+asthma
+asthma 
+acute renal failure 
+advanced cervical cancer
+"chronic asthma"
+ "Diabetes"
+ "history of Asthma and Hepatitis C", 
+34 weeks pregnancy, 
+5 days post-partum
+ dysuria
+endocarditis 
+epilepsy
+epilepsy
+hepatitis c, 
+Hepatitis/Cirrhosis, Hepatic Encephalopathy 
+history of  Duodenal cancer
+history of  hypertension 
+history of Alzheimer and femoral  head necrosis
+history of Amyotrophic lateral sclerosis
+History of Ascites  of  unknown origin,
+
+history of blunt abdominal trauma mid-July with laparotomy surgery 
+history of cardiomyopathy
+history of chronic anemia 
+history of chronic immunocompromising disease
+history of Chronic obstructive  pulmonary disease
+history of chronic obstructive pulmonary disease secondary to heavy smoking 
+history of cirrhosis
+history of Cirrhosis with portal hypertension
+history of convulsions
+history of Cryptococcal meningitis
+history of decompensated
+history of DM
+history of DM 
+history of DM, HTN and ischemic stroke
+history of Esophagus Tumor
+history of HTN and DM
+history of hypertension
+history of hypertension 
+history of lower limb functional impairment
+history of peripartum cardiomyopathy with severe dilated cardiomyopathy 
+history of Pigeon chest
+history of pleural TB
+history of Pulmonary Tuberculosis 
+history of renal failure
+history of Sepsis
+history of stroke secondary to hypertension 
+history of TB-Meningitis, 
+history of use of traditional medications 
+HIV acute kidney injury 
+HTN
+HTN and AKI
+HTN and DM
+hypertension
+hypertension 
+hypertension, 
+hypertension.
+ic immunocompromising disease 
+immunocompromising disease
+kidney cancer 
+kidney disease
+leukemia
+liver cirrhosis
+lower limbs neurological deficits
+lung adenocarcinoma
+Lung cancer
+lung cancer with possible Diabetes 
+Lung fibrosis
+lung tumor and hypertension
+lymphoma
+mental illness
+mental illness 
+metabolic syndrome
+metastasized gastric cancer 
+mouth carcinoma
+nephropathy, 
+no existing comorbidities
+No information
+No information 
+no known  comorbidity
+no known  comorbidity 
+no known  comorbidity, 
+no known comorbiditie
+no known comorbidities.
+no known comorbiditiesNyarugenge TC 
+no known Comorbidity
+no known comorbidity but she was pregnant at 26weeks
+no known comorbidity but the patient had undergone a cesarean section
+no known comorbidity but with a past medical history use of unknown herbs 
+no known condition but she was pregnant at 26weeks 
+no known history
+no known history 
+no known history of comorbidity
+non-Hodgkin s lymphoma 
+NYIRAKIMONYO Anasthasie 
+obesity
+paraplegia
+paraplegia 
+paraplegia post trauma.
+paraplegia secondary to spinal cord injury
+paraplegic
+Parkinson s
+Parkinson s disease
+peptic  ulcer disease
+peritonitis
+peritonitis post c-section
+plasma cell cancer
+pneumonia
+Post C/S peritonitis
+post-c section
+postpartum
+preeclampsia
+prematurely 
+prostate disease
+prostatic cancer
+psychosis
+psychotic disorder
+pulmonary TB, 
+pulmonary tuberculosis
+pyomyositis
+renovascular disease
+schizophrenia.
+severe rheumatoid arthritis
+severe traumatic brain injury. 
+sigmoid cancer
+spleen enlargement
+stage 3 cervical cancer
+stroke
+stroke and hypertension
+suspected diabetes 
+suspicion of a history of congenital heart disease 
+tuberculosis
+twin pregnancy at term 
+undiagnosed diabetes
+unknown history
+uterine prolapse
+vasculitis 
+visual impairment
+w Hepatitis C
+wasthma
+with a history of esophageal cancer 
+with a history of hypertension
+with history of Hepatitis C 
+with liver cirrhosis due to Hepatitis C.
+with no comorbidity
+with no known comorbidity
+with no known history
+
+```
+## Introduction
 
 ## Methods
 
