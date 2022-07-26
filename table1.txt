@@ -1,0 +1,71 @@
+	No.	%
+outcome		
+0	876.0	41.6
+1	1,228.0	58.4
+Total	2,104.0	100.0
+
+Gender		
+Female	1,107.0	52.6
+Males	997.0	47.4
+Total	2,104.0	100.0
+
+agecat2		
+<20 Years	50.0	2.4
+20-30 Years	142.0	6.7
+30-40 Years	279.0	13.3
+40-50 Years	261.0	12.4
+50-60 Years	267.0	12.7
+60-70 Years	383.0	18.2
+70-80 Years	346.0	16.4
+80+ Years	376.0	17.9
+Total	2,104.0	100.0
+
+treat2		
+No medecine	116.0	5.5
+FVP/IVM/O2/ABT	1,904.0	90.5
+MAB/Cocktail	84.0	4.0
+Total	2,104.0	100.0
+
+vacc		
+Not vaccineted	1,892.0	89.9
+ Vaccineted	212.0	10.1
+Total	2,104.0	100.0
+
+type_vacc2		
+1AstraZeneca & 2 Moderna	5.0	0.2
+2Pfizer & Moderna	72.0	3.4
+AstraZeneca, Pfizer & Moderna	1.0	0.0
+Moderna	1.0	0.0
+AstraZeneca	76.0	3.6
+Pfizer	82.0	3.9
+Johnson & Johnson	3.0	0.1
+Sputnik	1.0	0.0
+Sinopharm	4.0	0.2
+Unknown	1,858.0	88.3
+AstraZeneca & Pfizer	1.0	0.0
+Total	2,104.0	100.0
+
+dosenumber1		
+0	1,858.0	88.3
+1	156.0	7.4
+2	79.0	3.8
+3	11.0	0.5
+Total	2,104.0	100.0
+
+comorb2		
+ No Comorbity	1,168.0	55.5
+ One comorbity	424.0	20.2
+Pregnant women	90.0	4.3
+Asthma	29.0	1.4
+HIV Positive	48.0	2.3
+Diabetes	82.0	3.9
+Two comorbities	53.0	2.5
+3+ comorbidities	210.0	10.0
+Total	2,104.0	100.0
+
+RECODE of days1 (days)		
+ 0-14 Days	836.0	39.7
+15-29 Days	327.0	15.5
+30 Days +	941.0	44.7
+Total	2,104.0	100.0
+

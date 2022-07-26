@@ -1,0 +1,92 @@
+	outcome		
+	0	1	Total
+	Row %	Row %	Row %
+Gender			
+Female	0.0	1.0	1.0
+Males	0.0	1.0	1.0
+Total	0.0	1.0	1.0
+
+Pearson: Uncorrected chi2(1) = .			
+Design-based F(., .) = . Pr = .			
+
+agecat2			
+<20 Years	0.0	1.0	1.0
+20-30 Years	0.0	1.0	1.0
+30-40 Years	0.0	1.0	1.0
+40-50 Years	0.0	1.0	1.0
+50-60 Years	0.0	1.0	1.0
+60-70 Years	0.0	1.0	1.0
+70-80 Years	0.0	1.0	1.0
+80+ Years	0.0	1.0	1.0
+Total	0.0	1.0	1.0
+
+Pearson: Uncorrected chi2(7) = .			
+Design-based F(., .) = . Pr = .			
+
+treat2			
+No medecine	0.0	1.0	1.0
+FVP/IVM/O2/ABT	0.0	1.0	1.0
+MAB/Cocktail	0.0	1.0	1.0
+Total	0.0	1.0	1.0
+
+Pearson: Uncorrected chi2(2) = .			
+Design-based F(., .) = . Pr = .			
+
+vacc			
+Not vaccineted	0.0	1.0	1.0
+ Vaccineted	0.0	1.0	1.0
+Total	0.0	1.0	1.0
+
+Pearson: Uncorrected chi2(1) = .			
+Design-based F(., .) = . Pr = .			
+
+type_vacc2			
+1AstraZeneca & 2 Moderna	0.0	1.0	1.0
+2Pfizer & Moderna	0.0	1.0	1.0
+AstraZeneca, Pfizer & Moderna	0.0	1.0	1.0
+Moderna	0.0	1.0	1.0
+AstraZeneca	0.0	1.0	1.0
+Pfizer	0.0	1.0	1.0
+Johnson & Johnson	0.0	1.0	1.0
+Sputnik	0.0	1.0	1.0
+Sinopharm	0.0	1.0	1.0
+Unknown	0.0	1.0	1.0
+AstraZeneca & Pfizer	0.0	1.0	1.0
+Total	0.0	1.0	1.0
+
+Pearson: Uncorrected chi2(10) = .			
+Design-based F(., .) = . Pr = .			
+
+dosenumber1			
+0	0.0	1.0	1.0
+1	0.0	1.0	1.0
+2	0.0	1.0	1.0
+3	0.0	1.0	1.0
+Total	0.0	1.0	1.0
+
+Pearson: Uncorrected chi2(3) = .			
+Design-based F(., .) = . Pr = .			
+
+comorb2			
+ No Comorbity	0.0	1.0	1.0
+ One comorbity	0.0	1.0	1.0
+Pregnant women	0.0	1.0	1.0
+Asthma	0.0	1.0	1.0
+HIV Positive	0.0	1.0	1.0
+Diabetes	0.0	1.0	1.0
+Two comorbities	0.0	1.0	1.0
+3+ comorbidities	0.0	1.0	1.0
+Total	0.0	1.0	1.0
+
+Pearson: Uncorrected chi2(7) = .			
+Design-based F(., .) = . Pr = .			
+
+RECODE of days1 (days)			
+ 0-14 Days	0.0	1.0	1.0
+15-29 Days	0.0	1.0	1.0
+30 Days +	0.0	1.0	1.0
+Total	0.0	1.0	1.0
+
+Pearson: Uncorrected chi2(2) = .			
+Design-based F(., .) = . Pr = .			
+
